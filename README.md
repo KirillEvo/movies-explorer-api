@@ -1,3 +1,3 @@
 # Movies Explorer Api
 
-* [Ссылка на домен] (http://api.dip.nomoredomains.xyz/);
+* [Ссылка на домен API](http://api.dip.nomoredomains.xyz);
