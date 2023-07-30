@@ -21,7 +21,7 @@ const getUserData = (req, res, next) => {
 
 function updateData(req, res, next, args) {
   User.findByIdAndUpdate(req.user._id, args, { new: true, runValidators: true })
-    .then((user) => { res.send(user); })
+    .then((user) => res.send(user))
     .catch((err) => {
       if (err.name === 'ValidationError') {
         next(new BadRequest('Ошибка 400'));

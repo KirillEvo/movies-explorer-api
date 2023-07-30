@@ -24,6 +24,7 @@ const addMovie = (req, res, next) => {
     nameRU,
     nameEN,
   } = req.body;
+  console.log(req.body);
   const owner = req.user._id;
   Movie.create({
     country,

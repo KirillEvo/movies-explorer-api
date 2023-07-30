@@ -6,7 +6,8 @@
   "scripts": {
       "lint": "npx eslint .",
       "start": "node app.js",
-      "dev": "nodemon app.js"
+      "dev": "nodemon app.js",
+      "deploy": "scp -r $PWD/middlewares $PWD/routes $PWD/controllers kdv@51.250.7.59:/home/kdv/diploma/movies-explorer-api"
   },
   "author": "Kirill Dvoryaninov",
   "license": "ISC",

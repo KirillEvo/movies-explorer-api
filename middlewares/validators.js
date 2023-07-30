@@ -41,17 +41,17 @@ const updateUserDataValid = celebrate({
 
 const addMovieValidator = celebrate({
   body: Joi.object().keys({
-    country: Joi.string().required(),
-    director: Joi.string().required(),
+    country: Joi.string().min(1),
+    director: Joi.string().min(1),
     duration: Joi.number().required(),
-    year: Joi.string().required(),
-    description: Joi.string().required(),
+    year: Joi.string().min(1),
+    description: Joi.string().min(1),
     image: Joi.string().custom(validateUrl),
     trailerLink: Joi.string().custom(validateUrl),
     thumbnail: Joi.string().custom(validateUrl),
-    movieId: Joi.number().required(),
-    nameRU: Joi.string().required(),
-    nameEN: Joi.string().required(),
+    movieId: Joi.number(),
+    nameRU: Joi.string().min(1),
+    nameEN: Joi.string().min(1),
   }),
 });
 
